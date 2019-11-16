@@ -1,0 +1,13 @@
+#UTN 2019 gitignore
+
+# Intellij
+.idea
+*.iml
+
+# Django & python
+src/iquilar/*/__pycache__/
+src/iquilar/*/migrations/
+*.sqlite3
+
+# Project
+src/iquilar/media/

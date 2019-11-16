@@ -1,0 +1,115 @@
+[
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$36000$Iqs55aFPrsjI$MRPsEqzqo4nH5AfNuYxs3YIlmxvJfDzr+5usdb0mAQc=",
+        "last_login": "2019-11-24T17:33:38.329Z",
+        "is_superuser": true,
+        "username": "superuser",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2019-11-24T17:33:06.662Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$36000$BKp8bnNN1zlT$51W3XJlneAqX3h/j+aYvEhzpd/wqZvkRRKSXj9XwtIg=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2019-11-24T17:36:02Z",
+        "groups": [],
+        "user_permissions": [
+            22,
+            23,
+            1,
+            2
+        ]
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$36000$LUphHl5UyVpc$8aSH5CklUBYf9ZzwNJGVpiiAMEzrVmCWU7J07Ccs5Zg=",
+        "last_login": "2019-11-24T17:40:33.279Z",
+        "is_superuser": false,
+        "username": "jane.doe",
+        "first_name": "Jane",
+        "last_name": "Doe",
+        "email": "janedoe@mail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2019-11-24T17:38:19Z",
+        "groups": [
+            1
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$36000$Eko3bdVOYoEA$/uU9yZTpKKzJUKb39hmXpdhxR0L1J9Hiwtn7qGFKhhQ=",
+        "last_login": "2019-11-24T17:41:39.215Z",
+        "is_superuser": false,
+        "username": "john.doe",
+        "first_name": "John",
+        "last_name": "Doe",
+        "email": "johndoe@mail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2019-11-24T17:39:00Z",
+        "groups": [
+            1
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "bookings.city",
+    "pk": 1,
+    "fields": {
+        "name": "Mar del Plata",
+        "picture":"/hotels/images/1descarga_1.jpg"
+    }
+},
+{
+    "model": "bookings.city",
+    "pk": 2,
+    "fields": {
+        "name": "Buenos Aires",
+        "picture":"/hotels/images/2descarga_2.jpg"
+    }
+},
+{
+    "model": "bookings.city",
+    "pk": 3,
+    "fields": {
+        "name": "C\u00f3rdoba",
+        "picture":"/hotels/images/3descarga_3.jpg"
+    }
+},
+{
+    "model": "bookings.city",
+    "pk": 4,
+    "fields": {
+        "name": "Rosario",
+        "picture":"/hotels/images/4descarga_4.jpg"
+    }
+}
+]

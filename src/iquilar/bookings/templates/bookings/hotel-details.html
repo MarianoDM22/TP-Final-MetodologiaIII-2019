@@ -1,0 +1,69 @@
+{% extends "./../base/base.html" %}
+
+{% load static %}
+
+{% block title %}Search Results{% endblock %}
+
+{% block styles %}
+{% endblock %}
+
+{% block content %}
+
+	{% include "./../base/navbar.html" %}
+
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-md-10 offset-md-1 pt-3 pb-3" style="background-color: #f5f5f5;">
+				<section class="row tm-item-preview">
+                    <div class="col-md-6 col-sm-12 mb-md-0 mb-5">
+                        <img src="{{ property.picture.url }}" alt="Image" class="img-fluid tm-img-center-sm">
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <h2 class="tm-blue-text tm-margin-b-p">{{ property.name|title }}</h2>
+                        <p class="tm-margin-b-p">{{ property.description|upper }}</p>
+                        <p class="tm-blue-text tm-margin-b-s">City: {{ property.city.name|capfirst }}</p>
+                        <p class="tm-blue-text tm-margin-b-s">Price: AR$ {{ property.daily_cost }}</p>
+                    </div>
+                </section>
+			</div>
+			<div class="col-12 col-md-10 offset-md-1 pt-3 pb-3" style="background-color: #f5f5f5;">
+				<form action="/bookings/check_availability/" method="post">
+					{% csrf_token %}
+                    <div class="form-row align-items-center">
+                        <div class="form-group col-sm-3">
+                            <label for="inputEmail4">First Name</label>
+                            <input type="text" name="first_name" class="form-control mb-2 mb-sm-0" placeholder="Jane" required>
+                        </div>
+                        <div class="form-group col-sm-3">
+                            <label for="inputEmail4">Last Name</label>
+                            <input type="text" name="last_name" class="form-control" placeholder="Doe" required>
+                        </div>
+                        <div class="form-group col-sm-3">
+                            <label for="inputEmail4">Email</label>
+                            <input type="email" name="email" class="form-control" placeholder="name@mail.com" required>
+                        </div>
+                    </div>
+					<div class="form-row align-items-center">
+						<div class="form-group col-sm-3">
+                            <label for="inputEmail4">Check-in</label>
+							<input type="date" name="start_date" class="form-control mb-2 mb-sm-0" required>
+						</div>
+						<div class="form-group col-sm-3">
+                            <label for="inputEmail4">Check-out</label>
+							<input type="date" name="end_date" class="form-control" required>
+						</div>
+						<input type="hidden" name="property_id" value="{{ property.id }}">
+					</div>
+                    <div class="form-group float-right">
+                        <button type="submit" class="btn btn-warning">Reserve</button>
+                    </div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	{% include "./../base/footer.html" %}
+
+{% endblock %}
+
+{% block scripts %}{% endblock %}
